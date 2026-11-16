@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+
+  --color-tinta: #332344;
+  --color-texto-suave: #776681;
+  --color-lineas: #d9c9e4;
+  --color-lavanda: #eee5f5;
+  --color-blanco-rosado: #fffaff;
+  --color-morado: #663a87;
+  --color-morado-oscuro: #43245f;
+  --color-coral: #e9798d;
+  --color-coral-suave: #f8dbe5;
+  --color-lila: #c9c1e8;
+  --color-morado-medio: #8870b1;
+
+  --shadow-tarjeta: 0 10px 28px -8px rgba(67, 36, 95, 0.1), 0 2px 6px -1px rgba(102, 58, 135, 0.06);
+  --shadow-modal: 0 24px 48px -12px rgba(51, 35, 68, 0.22);
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--color-lavanda);
+    color: var(--color-tinta);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-titulo {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+/* Números alineados verticalmente en tablas, precios y totales */
+.cifras-tabulares {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Respeto por preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

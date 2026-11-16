@@ -1,0 +1,6 @@
+{
+  "name": "Punto Norte Market",
+  "description": "Cliente web para la gestión de productos, clientes y ventas de Punto Norte Market.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
